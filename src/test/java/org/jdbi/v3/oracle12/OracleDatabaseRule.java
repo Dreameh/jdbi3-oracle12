@@ -11,9 +11,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jdbi.v3.oracle12;
 
-import static org.junit.Assume.assumeNoException;
+package org.jdbi.v3.oracle12;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -28,13 +27,16 @@ import org.jdbi.v3.core.rule.DatabaseRule;
 import org.jdbi.v3.core.spi.JdbiPlugin;
 import org.junit.rules.ExternalResource;
 
+import static org.junit.Assume.assumeNoException;
+
 /**
  * Helper for a single, superuser privileged Oracle database.
  */
 public class OracleDatabaseRule extends ExternalResource implements DatabaseRule {
     /*
      * Used this guide to install Oracle locally on a VirtualBox VM:
-     * https://dimitrisli.wordpress.com/2012/08/08/how-to-install-oracle-database-on-mac-os-any-version/
+     * https://dimitrisli.wordpress.com/2012/08/08/how-to-install-oracle-database-on
+     * -mac-os-any-version/
      */
 
     // schema installed by default in Oracle DB Developer VM
@@ -60,7 +62,8 @@ public class OracleDatabaseRule extends ExternalResource implements DatabaseRule
         }
 
         sharedHandle.execute("create sequence something_id_sequence INCREMENT BY 1 START WITH 100");
-        sharedHandle.execute("create table something (name varchar(200), id int, constraint something_id primary key (id))");
+        sharedHandle.execute(
+                "create table something (name varchar(200), id int, constraint something_id primary key (id))");
         con = sharedHandle.getConnection();
     }
 

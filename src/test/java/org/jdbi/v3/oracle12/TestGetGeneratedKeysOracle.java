@@ -13,8 +13,6 @@
  */
 package org.jdbi.v3.oracle12;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -27,6 +25,8 @@ import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 import org.junit.Rule;
 import org.junit.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * This test assumes an instance of Oracle database called 'test' is

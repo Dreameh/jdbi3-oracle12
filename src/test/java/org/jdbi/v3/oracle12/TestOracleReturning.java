@@ -13,19 +13,18 @@
  */
 package org.jdbi.v3.oracle12;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.jdbi.v3.oracle12.OracleReturning.returnParameters;
-import static org.jdbi.v3.oracle12.OracleReturning.returningDml;
-
 import java.util.List;
 
+import oracle.jdbc.OracleTypes;
 import org.jdbi.v3.core.Handle;
 import org.jdbi.v3.core.Something;
 import org.jdbi.v3.sqlobject.SqlObjectPlugin;
 import org.junit.Rule;
 import org.junit.Test;
 
-import oracle.jdbc.OracleTypes;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.jdbi.v3.oracle12.OracleReturning.returnParameters;
+import static org.jdbi.v3.oracle12.OracleReturning.returningDml;
 
 public class TestOracleReturning {
 
